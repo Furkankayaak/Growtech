@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROWTECH Start-Up Zone & Demoday Başvuru Formu</title>
+    <style>
+        :root {
+            --primary-border-color: #ccc;
+            --primary-text-color: #333;
+            --secondary-text-color: #666;
+            --required-color: #d9534f;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: var(--primary-text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background-color: #fff;
+            padding: 30px 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .header-left { display: flex; align-items: center; }
+        .header-left span { font-size: 14px; color: var(--secondary-text-color); margin-right: 20px; }
+        .header-right { display: flex; align-items: center; gap: 15px; }
+        .lang-switch { font-weight: bold; font-size: 14px; color: var(--primary-text-color); }
+        .menu-icon { width: 30px; height: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+        .menu-icon span { display: block; width: 100%; height: 4px; background-color: #555; border-radius: 2px; }
+        main { padding-left: 0; }
+        h1 { font-size: 24px; font-weight: normal; margin-bottom: 20px; text-align: center; }
+        h2, h3 { font-size: 18px; font-weight: bold; margin-top: 30px; margin-bottom: 15px; }
+        p, ul { font-size: 15px; line-height: 1.6; color: var(--secondary-text-color); }
+        ul { padding-left: 20px; }
+        .form-section-title { font-size: 18px; font-weight: bold; text-transform: uppercase; color: #555; margin-top: 40px; margin-bottom: 20px; padding-bottom: 5px; border-bottom: 1px solid #eee; }
+        .form-group { margin-bottom: 25px; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 15px; }
+        label .required { color: var(--required-color); margin-left: 2px; }
+        label .instruction { display: block; font-weight: normal; font-size: 13px; color: var(--secondary-text-color); margin-top: 4px; }
+        .form-control, select, textarea { width: 100%; padding: 10px; border: 1px solid var(--primary-border-color); border-radius: 4px; font-size: 15px; box-sizing: border-box; }
+        textarea { min-height: 100px; resize: vertical; }
+        .field-info { font-size: 12px; color: var(--secondary-text-color); margin-top: 5px; }
+        .checkbox-group { display: flex; flex-direction: column; gap: 10px; }
+        .checkbox-item { display: flex; align-items: center; }
+        .checkbox-item input[type="checkbox"] { margin-right: 10px; width: auto; }
+        .checkbox-item label { font-weight: normal; margin-bottom: 0; }
+        .checkbox-item a { color: #007bff; text-decoration: none; }
+        .checkbox-item a:hover { text-decoration: underline; }
+        .upload-btn-wrapper { position: relative; overflow: hidden; display: inline-block; }
+        .btn-upload { border: 1px solid var(--primary-border-color); color: var(--primary-text-color); background-color: #f0f0f0; padding: 8px 20px; border-radius: 4px; font-size: 14px; font-weight: normal; cursor: pointer; }
+        .btn-upload:before { content: '⬆️'; margin-right: 8px; }
+        .upload-btn-wrapper input[type=file] { font-size: 100px; position: absolute; left: 0; top: 0; opacity: 0; cursor: pointer; }
+        .submit-button { display: block; width: auto; margin: 40px auto 20px auto; padding: 12px 30px; font-size: 16px; font-weight: bold; color: var(--secondary-text-color); background-color: #f7f7f7; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; }
+        .submit-button:hover { background-color: #e9e9e9; }
+        footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; font-size: 13px; color: var(--secondary-text-color); }
+        .form-logos { text-align: center; margin-bottom: 30px; display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; }
+        .form-logo-item { height: 70px; width: auto; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-left">
+            <span></span>
+        </div>
+        <div class="header-right">
+            <span class="lang-switch">TR</span>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <form action="" method="POST" enctype="multipart/form-data">
+        
+            <div class="form-logos">
+                <img src="grow.png" alt="Growtech Logo" class="form-logo-item">
+                <img src="itu.png" alt="İTÜ Logo" class="form-logo-item">
+                <img src="aosb.png" alt="AOSB Logo" class="form-logo-item">
+            </div>
+
+            <h1>GROWTECH Start-Up Zone & Demoday Başvuru Formu</h1>
+            
+            <h2 class="form-section-title">Hakkında</h2>
+            
+            <h3>Sera Sektörünün Küresel Buluşma Noktası</h3>
+            <p>Dünyanın en büyük sera endüstrisi fuarı olan GROWTECH. ANTALYA, katılımcılarına ve ziyaretçilerine dünya çapında yeni iş fırsatları sunuyor. 2024 yılında 31 ülkeden 684 katılımcıyı ve 135 ülkeden 39.575 uluslararası profesyoneli ağırladı.</p>
+            <p>Dünyanın seracılık teknolojilerine adanmış en büyük fuarı olan GROW TECH. ANTALYA, Sera Teknolojileri ve Ekipmanları, Sulama Sistemleri ve Teknolojileri, Tohum Geliştirme ve Yetiştirme, Fide Yetiştirme, Bitki Besleme ve Koruma gibi kategorilerde uzmanlaşmış uluslararası katılımcıları ve önde gelen şirketleri bir araya getirmenin yanı sıra Uluslararası Konferanslar, GROW TECH. Tarım Sohbetleri ve ATSO Growtech Tarımsal İnovasyon Ödülleri gibi etkinliklerle fuar sektörüne yeni bir bakış açısı getiriyor.</p>
+            <p>Dünyanın en büyük seracılık etkinliği GROWTECH. ANTALYA, 18-21 Kasım 2025 tarihleri arasında 24. kez tarım profesyonellerini bir araya getirecek.</p>
+
+            <h3>Genel Kriterler</h3>
+            <p>Eğer girişiminiz</p>
+            <ul>
+                <li>Teknoparkta yer alıyor olmak.</li>
+                <li>Teknoparkta tamamlanmış Ar-Ge projesi neticesinde satışa hazır bir ürün sahibi olmak.</li>
+            </ul>
+            
+            <div class="form-group">
+                <label for="email">1. E-posta <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <div class="form-group">
+                <label>2. Lütfen GROWTECH Start-Up Zone & Demoday Etkinliği için destek kapsamını dikkatlice okuyun <span class="required">*</span></label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terms_agree" name="terms_agree" required>
+                        <label for="terms_agree">Bu <a href="data:text/html,<p>Lorem ipsum dolor sit amet...</p>" target="_blank">bağlantıda</a> belirtilen hüküm ve koşulları kabul ediyorum.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terms_declare" name="terms_declare" required>
+                        <label for="terms_declare">Verdiğim bilgilerin doğru ve gerçek olduğunu beyan ederim. Ayrıca, herhangi bir kasıtlı sahtekârlığın bu başvurunun reddedilmesine ve desteğin herhangi bir zamanda askıya alınmasına neden olabileceğini de anlıyorum.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terms_acknowledge" name="terms_acknowledge" required>
+                        <label for="terms_acknowledge">Destekleyen kuruluşun, öngörülemeyen durumların varlığı halinde desteği kısmen veya tamamen geri çekme hakkını saklı tutacağını kabul ediyorum.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terms_share" name="terms_share" required>
+                        <label for="terms_share">Verdiğim bilgilerin gerektiğinde raporlama, tanıtım veya teknik destek gibi amaçlarla kullanılabileceğini veya medya ve üçüncü taraflarla paylaşılabileceğini kabul ediyorum.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terms_contact" name="terms_contact" required>
+                        <label for="terms_contact">Etkinlik sonrasında geri bildirimde bulunmak veya girişimimin değerlendirilmesini ve başka bir etkinliğe katılmak üzere davet edilmek üzere benimle iletişime geçilmesini kabul ediyorum.</label>
+                    </div>
+                </div>
+                <div class="field-info">Bu Alan Zorunludur. Tüm seçenekler işaretlenmelidir.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="company_name">3. Start-Up’ın tam adı <span class="required">*</span><span class="instruction">Resmî kayıtlarda kullandığınız şirket adının tam halini lütfen belirtiniz.</span></label>
+                <input type="text" id="company_name" name="company_name" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="short_name">4. Start-Up'ın kısa adı <span class="required">*</span></label>
+                <input type="text" id="short_name" name="short_name" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 100 Karakter)</div>
+            </div>
+
+            <!-- GÜNCELLEME: type="text" olan alan "date" olarak değiştirildi ve placeholder kaldırıldı. -->
+            <div class="form-group">
+                <label for="foundation_date">5. Kuruluş tarihi <span class="required">*</span></label>
+                <input type="date" id="foundation_date" name="foundation_date" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="teknopark">6. Aktif olarak yer alınan Teknopark <span class="required">*</span></label>
+                <select id="teknopark" name="teknopark" class="form-control" required>
+                    <option value="">Seçiniz</option>
+                    <option value="Yıldız Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">Yıldız Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="ODTÜ Teknokent Teknoloji Geliştirme Bölgesi">ODTÜ Teknokent Teknoloji Geliştirme Bölgesi</option>
+                    <option value="TÜBİTAK Marmara Teknokent">TÜBİTAK Marmara Teknokent</option>
+                    <option value="İzmir Teknoloji Geliştirme Bölgesi">İzmir Teknoloji Geliştirme Bölgesi</option>
+                    <option value="GOSB Teknopark Teknoloji Geliştirme Bölgesi">GOSB Teknopark Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Bilkent Cyberpark">Bilkent Cyberpark</option>
+                    <option value="Hacettepe Üniversitesi Teknoloji Geliştirme Bölgesi">Hacettepe Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="İTÜ Arı Teknokent Teknoloji Geliştirme Bölgesi">İTÜ Arı Teknokent Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Eskişehir Teknoloji Geliştirme Bölgesi (ATAP)">Eskişehir Teknoloji Geliştirme Bölgesi (ATAP)</option>
+                    <option value="Selçuk Üniversitesi Teknoloji Geliştirme Bölgesi">Selçuk Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Kocaeli Üniversitesi Teknoloji Geliştirme Bölgesi">Kocaeli Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="İstanbul Üniversitesi Teknoloji Geliştirme Bölgesi">İstanbul Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Batı Akdeniz Teknokenti Teknoloji Geliştirme Bölgesi">Batı Akdeniz Teknokenti Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Erciyes Üniversitesi Teknoloji Geliştirme Bölgesi">Erciyes Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Trabzon Teknoloji Geliştirme Bölgesi">Trabzon Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Çukurova Teknoloji Geliştirme Bölgesi">Çukurova Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Mersin Teknoloji Geliştirme Bölgesi">Mersin Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Göller Bölgesi Teknoloji Geliştirme Bölgesi">Göller Bölgesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Ulutek Teknoloji Geliştirme Bölgesi">Ulutek Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Erzurum Ata Teknokent Teknoloji Geliştirme Bölgesi">Erzurum Ata Teknokent Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Gaziantep Üniversitesi Teknoloji Geliştirme Bölgesi">Gaziantep Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Ankara Üniversitesi Teknoloji Geliştirme Bölgesi">Ankara Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Gazi Teknopark Teknoloji Geliştirme Bölgesi">Gazi Teknopark Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Fırat Teknoloji Geliştirme Bölgesi">Fırat Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Pamukkale Üniversitesi Teknoloji Geliştirme Bölgesi">Pamukkale Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Cumhuriyet Teknoloji Geliştirme Bölgesi">Cumhuriyet Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Dicle Üniversitesi Teknoloji Geliştirme Bölgesi">Dicle Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Trakya Üniversitesi Teknoloji Geliştirme Bölgesi">Trakya Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Sakarya Teknokent">Sakarya Teknokent</option>
+                    <option value="Tokat Teknoloji Geliştirme Bölgesi">Tokat Teknoloji Geliştirme Bölgesi</option>
+                    <option value="ASO Teknopark Teknoloji Geliştirme Bölgesi">ASO Teknopark Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi">Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Bolu Teknoloji Geliştirme Bölgesi">Bolu Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Malatya Teknoloji Geliştirme Bölgesi">Malatya Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Kütahya Dumlupınar Tasarım Teknoloji Geliştirme Bölgesi">Kütahya Dumlupınar Tasarım Teknoloji Geliştirme Bölgesi</option>
+                    <option value="İstanbul Teknoloji Geliştirme Bölgesi">İstanbul Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Samsun Teknoloji Geliştirme Bölgesi">Samsun Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Düzce Teknopark Teknoloji Geliştirme Bölgesi">Düzce Teknopark Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Harran Üniversitesi Teknoloji Geliştirme Bölgesi">Harran Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Kahramanmaraş Teknoloji Geliştirme Bölgesi">Kahramanmaraş Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Namık Kemal Üniversitesi Teknoloji Geliştirme Bölgesi">Namık Kemal Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Çanakkale Teknoloji Geliştirme Bölgesi">Çanakkale Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Bilişim Vadisi Teknoloji Geliştirme Bölgesi">Bilişim Vadisi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="İzmir Bilim ve Teknoloji Parkı Teknoloji Geliştirme Bölgesi">İzmir Bilim ve Teknoloji Parkı Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Yüzüncü Yıl Üniversitesi Teknoloji Geliştirme Bölgesi">Yüzüncü Yıl Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Çorum Teknoloji Geliştirme Bölgesi">Çorum Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Celal Bayar Üniversitesi Teknoloji Geliştirme Bölgesi">Celal Bayar Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Dokuz Eylül Teknoloji Geliştirme Bölgesi">Dokuz Eylül Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Bozok Üniversitesi Teknoloji Geliştirme Bölgesi">Bozok Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Kırıkkale Üniversitesi Teknoloji Geliştirme Bölgesi">Kırıkkale Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Niğde Üniversitesi Teknoloji Geliştirme Bölgesi">Niğde Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Mehmet Akif Ersoy Üniversitesi Teknoloji Geliştirme Bölgesi">Mehmet Akif Ersoy Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Finans Teknopark Teknoloji Geliştirme Bölgesi">Finans Teknopark Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Marmara Üniversitesi Teknoloji Geliştirme Bölgesi">Marmara Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Ege Teknokent Teknoloji Geliştirme Bölgesi">Ege Teknokent Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Ankara Teknopark Teknoloji Geliştirme Bölgesi (Yıldırım Beyazıt Ünv.)">Ankara Teknopark Teknoloji Geliştirme Bölgesi (Yıldırım Beyazıt Ünv.)</option>
+                    <option value="OSTİM Ekopark Teknoloji Geliştirme Bölgesi">OSTİM Ekopark Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Hatay Teknoloji Geliştirme Bölgesi">Hatay Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Balıkesir Üniversitesi Teknoloji Geliştirme Bölgesi">Balıkesir Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Karaman Teknoloji Geliştirme Bölgesi">Karaman Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Muğla Teknoloji Geliştirme Bölgesi">Muğla Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Konya Teknoloji Geliştirme Bölgesi">Konya Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Afyon-Uşak Zafer Teknoloji Geliştirme Bölgesi">Afyon-Uşak Zafer Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Adnan Menderes Teknoloji Geliştirme Bölgesi">Adnan Menderes Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Gaziantep OSB Teknoloji Geliştirme Bölgesi">Gaziantep OSB Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Zonguldak Teknoloji Geliştirme Bölgesi">Zonguldak Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Batman Üniversitesi Teknoloji Geliştirme Bölgesi">Batman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Osmaniye Teknoloji Geliştirme Bölgesi">Osmaniye Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Karabük Üniversitesi Teknoloji Geliştirme Bölgesi">Karabük Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Kapadokya Teknoloji Geliştirme Bölgesi">Kapadokya Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Gebze Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">Gebze Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Sağlık Bilimleri Üniversitesi Teknoloji Geliştirme Bölgesi">Sağlık Bilimleri Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Dudullu OSB Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi">Dudullu OSB Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Antalya OSB Teknoloji Geliştirme Bölgesi">Antalya OSB Teknoloji Geliştirme Bölgesi</option>
+                    <option value="İstanbul Sebahattin Zaim Teknoloji Geliştirme Bölgesi">İstanbul Sebahattin Zaim Teknoloji Geliştirme Bölgesi</option>
+                    <option value="İstanbul Medeniyet Üniversitesi Teknoloji Geliştirme Bölgesi">İstanbul Medeniyet Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Mersin Tarım Gıda İhtisas Teknoloji Geliştirme Bölgesi">Mersin Tarım Gıda İhtisas Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Kırklareli Üniversitesi Teknoloji Geliştirme Bölgesi">Kırklareli Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Teknohab Teknoloji Geliştirme Bölgesi">Teknohab Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Çankırı Teknoloji Geliştirme Bölgesi">Çankırı Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Kastamonu Üniversitesi Teknoloji Geliştirme Bölgesi">Kastamonu Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="İskenderun Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">İskenderun Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Giresun Teknoloji Geliştirme Bölgesi">Giresun Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Recep Tayyip Erdoğan Üniversitesi (ve) Türk Alman Üniversitesi Teknoloji Geliştirme Bölgesi">Recep Tayyip Erdoğan Üniversitesi (ve) Türk Alman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="ASBÜ Sosyal İnovasyon ve Girişimcilik Teknoloji Geliştirme Bölgesi">ASBÜ Sosyal İnovasyon ve Girişimcilik Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Bursa Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">Bursa Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Biruni Üniversitesi Teknoloji Geliştirme Bölgesi">Biruni Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Abdullah Gül Üniversitesi Teknoloji Geliştirme Bölgesi">Abdullah Gül Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Yalova Üniversitesi Teknoloji Geliştirme Bölgesi">Yalova Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Esenler Akıllı Şehir Odaklı İhtisas Teknoloji Geliştirme Bölgesi">Esenler Akıllı Şehir Odaklı İhtisas Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Aksaray Üniversitesi Teknoloji Geliştirme Bölgesi">Aksaray Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="TEKNOGÜ Teknoloji Geliştirme Bölgesi (Eskişehir Osmangazi Ünv.)">TEKNOGÜ Teknoloji Geliştirme Bölgesi (Eskişehir Osmangazi Ünv.)</option>
+                    <option value="Adıyaman Üniversitesi Teknoloji Geliştirme Bölgesi">Adıyaman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Ankara Yıldırım Beyazıt Üniversitesi Teknoloji Geliştirme Bölgesi">Ankara Yıldırım Beyazıt Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Altınbaş Üniversitesi Teknoloji Geliştirme Bölgesi">Altınbaş Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Sakarya Uygulamalı Bilimler Üniversitesi Teknoloji Geliştirme Bölgesi">Sakarya Uygulamalı Bilimler Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+                    <option value="Kadir Has Üniversitesi Silivri Teknoloji Geliştirme Bölgesi">Kadir Has Üniversitesi Silivri Teknoloji Geliştirme Bölgesi</option>
+                </select>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">7. Start-Up resmi adresi <span class="required">*</span></label>
+                <input type="text" id="address" name="address" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="trade_registry">8. Ticaret sicil numarası <span class="required">*</span></label>
+                <input type="text" id="trade_registry" name="trade_registry" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="tax_number">9. Vergi numarası <span class="required">*</span></label>
+                <input type="text" id="tax_number" name="tax_number" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="website">10. Web Sitesi URL'si <span class="required">*</span></label>
+                <input type="url" id="website" name="website" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 100 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">11. Start-Up Linkedin Profil URL'si <span class="required">*</span></label>
+                <input type="url" id="linkedin" name="linkedin" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label>12. Start-Up logosu (lütfen PNG formatında olan dosyalarınızı tercih edin ve dosyayı adlandırmak için kısa start-up adınızı kullanın) <span class="required">*</span></label>
+                <div class="upload-btn-wrapper">
+                    <button type="button" class="btn-upload">Dosya Yükle</button>
+                    <input type="file" name="logo_file" required/>
+                </div>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <!-- GÜNCELLEME: Başlık "Start-Up Profili" olarak değiştirildi. -->
+            <h2 class="form-section-title">Start-Up Profili</h2>
+
+            <div class="form-group">
+                <label for="oneliner">13. Girişiminizi sadece 8-10 kelimelik bir cümle ile tanımlayın <span class="required">*</span></label>
+                <input type="text" id="oneliner" name="oneliner" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="employees">14. Toplam çalışan sayısı <span class="required">*</span><span class="instruction">Kurucular dahil</span></label>
+                <input type="number" id="employees" name="employees" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="supports">15. Kuluçka merkezleri/hızlandırıcılar/başlangıç merkezleri/kamu kurumlarından aldığınız ilgili destekleri/teşvikleri/ödülleri aşağıda listeleyiniz. <span class="required">*</span></label>
+                <textarea id="supports" name="supports" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="investments">16. Varsa, bugüne kadar aldığınız yatırımları ilgili ayrıntılarla birlikte aşağıda listeleyin. <span class="required">*</span></label>
+                <textarea id="investments" name="investments" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="revenue_model">17. 3-5 yıl için finansal projeksiyonlarınızı detaylandırınız <span class="required">*</span></label>
+                <textarea id="revenue_model" name="revenue_model" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+            
+            <h2 class="form-section-title">ÜRÜN BİLGİLERİ</h2>
+
+            <div class="form-group">
+                <label for="product_name">18. Ürün adı <span class="required">*</span></label>
+                <input type="text" id="product_name" name="product_name" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+            
+            <!-- GÜNCELLEME: type="text" olan alan "date" olarak değiştirildi ve placeholder kaldırıldı. -->
+            <div class="form-group">
+                <label for="launch_date">19. Ürününüzün lansman tarihi (veya beklenen) <span class="required">*</span></label>
+                <input type="date" id="launch_date" name="launch_date" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="innovative_aspects">20. Ürününüzü benzer ürünlere kıyasla yenilikçi yönleri, ayırt edici özellikleri ve rekabet avantajları hakkında ayrıntılarla açıklayın. <span class="required">*</span></label>
+                <textarea id="innovative_aspects" name="innovative_aspects" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="usage_areas">21. Ürünün kullanım alanlarını belirtin <span class="required">*</span></label>
+                <input type="text" id="usage_areas" name="usage_areas" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="target_market">22. Hedef pazarınız veya müşteriniz kimdir <span class="required">*</span></label>
+                <textarea id="target_market" name="target_market" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="tech_vertical">23. Ürün teknoloji dikeyini (kullanılan teknolojiler) belirtin. <span class="required">*</span></label>
+                <textarea id="tech_vertical" name="tech_vertical" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <h2 class="form-section-title">KÜRESEL PAZARLAR İÇİN STRATEJİ</h2>
+            
+            <div class="form-group">
+                <label for="past_events">24. Hangi uluslararası fuarlara ve start-up etkinliklerine katıldınız? <span class="required">*</span></label>
+                <textarea id="past_events" name="past_events" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <h2 class="form-section-title">KATILIMCI 1 BİLGİLERİ</h2>
+
+            <div class="form-group">
+                <label for="p1_name">25. Katılımcının tam adı 1 <span class="required">*</span></label>
+                <input type="text" id="p1_name" name="p1_name" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="p1_position">26. Start-Up içindeki pozisyon <span class="required">*</span></label>
+                <input type="text" id="p1_position" name="p1_position" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="p1_email">27. E-posta adresi <span class="required">*</span></label>
+                <input type="email" id="p1_email" name="p1_email" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+            
+            <!-- GÜNCELLEME: type="text" olan alan "date" olarak değiştirildi ve placeholder kaldırıldı. -->
+            <div class="form-group">
+                <label for="p1_dob">28. Doğum tarihi <span class="required">*</span></label>
+                <input type="date" id="p1_dob" name="p1_dob" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="p1_id">29. Ulusal Kimlik (TC Kimlik) No <span class="required">*</span></label>
+                <input type="text" id="p1_id" name="p1_id" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="p1_education">30. Eğitim geçmişi <span class="required">*</span><span class="instruction">Üniversite, bölüm/program, mezuniyet yılı.</span></label>
+                <textarea id="p1_education" name="p1_education" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="p1_linkedin">31. Kişisel LinkedIn Profilinin Bağlantısı <span class="required">*</span></label>
+                <input type="url" id="p1_linkedin" name="p1_linkedin" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <h2 class="form-section-title">KATILIMCI 2 BİLGİLERİ</h2>
+            
+            <div class="form-group">
+                <label for="p2_name">32. Katılımcının tam adı 2 <span class="required">*</span></label>
+                <input type="text" id="p2_name" name="p2_name" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="p2_position">33. Start-Up içindeki pozisyon <span class="required">*</span></label>
+                <input type="text" id="p2_position" name="p2_position" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="p2_phone">34. Cep telefonu numarası <span class="required">*</span></label>
+                <input type="tel" id="p2_phone" name="p2_phone" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="p2_email">35. E-posta adresi <span class="required">*</span></label>
+                <input type="email" id="p2_email" name="p2_email" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <!-- GÜNCELLEME: type="text" olan alan "date" olarak değiştirildi ve placeholder kaldırıldı. -->
+            <div class="form-group">
+                <label for="p2_dob">36. Doğum tarihi <span class="required">*</span></label>
+                <input type="date" id="p2_dob" name="p2_dob" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="p2_education">37. Eğitim geçmişi <span class="required">*</span><span class="instruction">Üniversite, bölüm/program, mezuniyet yılı.</span></label>
+                <textarea id="p2_education" name="p2_education" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="p2_linkedin">38. Kişisel Linkedin Profilinin Bağlantısı <span class="required">*</span></label>
+                <input type="url" id="p2_linkedin" name="p2_linkedin" class="form-control" required>
+                <div class="field-info">Bu Alan Zorunludur.</div>
+            </div>
+
+            <h2 class="form-section-title">EKİP VE START-UP VİDEOSU</h2>
+            
+            <div class="form-group">
+                <label for="team_competences">39. Ekip üyelerinizin satış/pazarlama, ağ oluşturma ve fuarcılık yetkinliklerini ve deneyimlerini açıklayınız. Başka ekip üyeleriniz varsa, lütfen ayrıntıları verin. <span class="required">*</span></label>
+                <textarea id="team_competences" name="team_competences" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+
+            <h2 class="form-section-title">EK BİLGİLER</h2>
+            
+            <div class="form-group">
+                <label for="additional_info">40. Başvurunuzu değerlendirirken yardımcı olacağını düşündüğünüz ek bilgileri lütfen bizimle paylaşın. <span class="required">*</span></label>
+                <textarea id="additional_info" name="additional_info" class="form-control" required></textarea>
+                <div class="field-info">Bu Alan Zorunludur. (Maksimum 1000 Karakter)</div>
+            </div>
+            
+            <button type="submit" class="submit-button">Başvuru Gönder</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
