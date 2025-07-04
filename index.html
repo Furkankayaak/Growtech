@@ -78,11 +78,10 @@
         .submit-button:hover { background-color: #e9e9e9; }
         footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; font-size: 13px; color: var(--secondary-text-color); }
         
-        /* ----- YENİ VE GÜNCELLENMİŞ LOGO STİLLERİ (GRID KULLANILARAK) ----- */
         .form-logos {
             display: grid;
             /* 3 sütunlu bir yapı: soldaki ve sağdaki sütunlar eşit yer kaplar (1fr), 
-               ortadaki sütun ise içeriği kadar yer kaplar (auto). Bu, mükemmel ortalamayı sağlar. */
+               ortadaki sütun ise içeriği kadar yer kaplar (auto). Bu, ortalamayı sağlar. */
             grid-template-columns: 1fr auto 1fr;
             align-items: center;     /* Logoları dikeyde hizalar */
             gap: 40px;               /* Sütunlar arası boşluk */
@@ -91,7 +90,7 @@
         }
 
         .form-logo-item {
-            /* Her logonun kendi grid hücresinde yatayda ortalanmasını sağlar */
+            
             margin: 0 auto; 
             height: auto;
             max-width: 100%; /* Hücresinden taşmasını engeller */
@@ -114,7 +113,7 @@
             /* Genişliğini kontrol altında tutmak için max-width veriyoruz */
             max-width: 230px;
         }
-        /* ----- DEĞİŞİKLİK BURADA BİTİYOR ----- */
+       
 
         .participant-block { border: 1px dashed #ddd; padding: 20px; margin-top: 20px; border-radius: 5px; position: relative; }
         .add-participant-button, .remove-participant-btn { padding: 8px 15px; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 14px; }
@@ -158,12 +157,10 @@
             <p>Antalya OSB Teknopark ve İTÜ Arı Teknokent işbirliği ile düzenlenecek Growtech Start-Up Zone & Demoday Organizasyonu, teknoparklarda faaliyet gösteren ve ürünü ticarileşmiş/ticarileşme aşamasında olan seçili girişimleri sektörle ve yatırımcılar ile buluşturacak.</p>
             <p>Yatırımcılar, sektörün köklü temsilcileri ve potansiyel müşterileriniz ile 3 gün boyunca Growtech'te bir arada olmak ve proje ve ürünlerinizi tanıtmak için lütfen başvuru formunu doldurun.</p>
 
-            <h3>Genel Kriterler</h3>
-            <ul>
-                <li>Teknoparkta yer alıyor olmak.</li>
-                <li>Teknoparkta tamamlanmış Ar-Ge projesi neticesinde satışa hazır bir ürün sahibi olmak.</li>
-            </ul>
             
+            <br>
+            <br>
+            <br>
             <div class="form-group">
                 <label for="email">1. E-posta <span class="required">*</span></label>
                 <input type="email" id="email" name="email" class="form-control" required>
@@ -209,142 +206,146 @@
                 <label for="foundation_date">5. Kuruluş tarihi <span class="required">*</span></label>
                 <input type="date" id="foundation_date" name="foundation_date" class="form-control" required>
             </div>
+            
+     <div class="form-group">
+    <label>6. Aktif olarak bir teknoparkta bulunuyor musunuz? <span class="required">*</span></label>
+    <div>
+        <label><input type="radio" name="teknopark_var_mi" value="Evet" required> Evet</label><br>
+        <label><input type="radio" name="teknopark_var_mi" value="Hayır" required> Hayır</label>
+    </div>
+</div>
 
-            <div class="form-group">
-                <label for="teknopark">6. Aktif olarak yer alınan Teknopark <span class="required">*</span></label>
-                <select id="teknopark" name="teknopark" class="form-control" required>
-                    <option value="">Seçiniz</option>
-                    <option value="Abdullah Gül Üniversitesi Teknoloji Geliştirme Bölgesi">Abdullah Gül Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Adıyaman Üniversitesi Teknoloji Geliştirme Bölgesi">Adıyaman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Adnan Menderes Üniversitesi Teknoloji Geliştirme Bölgesi">Adnan Menderes Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Afyon Uşak Zafer Teknoloji Geliştirme Bölgesi">Afyon Uşak Zafer Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Aksaray Üniversitesi Teknoloji Geliştirme Bölgesi">Aksaray Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Altınbaş Üniversitesi Teknoloji Geliştirme Bölgesi">Altınbaş Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Ankara Bilim Üniversitesi Teknoloji Geliştirme Bölgesi">Ankara Bilim Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Ankara Teknoloji Geliştirme Bölgesi">Ankara Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Ankara Teknopark Teknoloji Geliştirme Bölgesi">Ankara Teknopark Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Ankara Üniversitesi Teknoloji Geliştirme Bölgesi">Ankara Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Ankara Yıldırım Beyazıt Üniversitesi Teknoloji Geliştirme Bölgesi">Ankara Yıldırım Beyazıt Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Antalya Organize Sanayi Bölgesi Teknoloji Geliştirme Bölgesi">Antalya Organize Sanayi Bölgesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="ASBÜ Sosyal İnovasyon ve Girişimcilik Teknoloji Geliştirme Bölgesi">ASBÜ Sosyal İnovasyon ve Girişimcilik Teknoloji Geliştirme Bölgesi</option>
-                    <option value="ASO Teknopark Teknoloji Geliştirme Bölgesi">ASO Teknopark Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Balıkesir Üniversitesi Teknoloji Geliştirme Bölgesi">Balıkesir Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Bandırma Onyedi Eylül Üniversitesi Teknoloji Geliştirme Bölgesi">Bandırma Onyedi Eylül Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Batı Akdeniz Teknokenti Teknoloji Geliştirme Bölgesi">Batı Akdeniz Teknokenti Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Batman Üniversitesi Teknoloji Geliştirme Bölgesi">Batman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Bilişim Vadisi Teknoloji Geliştirme Bölgesi">Bilişim Vadisi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Biruni Üniversitesi Teknoloji Geliştirme Bölgesi">Biruni Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Boğaziçi Üniversitesi Kandilli Teknoloji Geliştirme Bölgesi">Boğaziçi Üniversitesi Kandilli Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi">Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Bolu Teknoloji Geliştirme Bölgesi">Bolu Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Bozok Teknoloji Geliştirme Bölgesi">Bozok Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Bursa Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">Bursa Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Celal Bayar Üniversitesi Teknoloji Geliştirme Bölgesi">Celal Bayar Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Cumhuriyet Teknoloji Geliştirme Bölgesi">Cumhuriyet Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Çanakkale Teknoloji Geliştirme Bölgesi">Çanakkale Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Çankırı Teknoloji Geliştirme Bölgesi">Çankırı Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Çorum Teknoloji Geliştirme Bölgesi">Çorum Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Çukurova Teknoloji Geliştirme Bölgesi">Çukurova Teknoloji Geliştirme Bölgesi</option>
-                    <option value="DENİZLİ OSB TEKNOLOJİ GELİŞTİRME BÖLGESİ">DENİZLİ OSB TEKNOLOJİ GELİŞTİRME BÖLGESİ</option>
-                    <option value="Dicle Üniversitesi Teknoloji Geliştirme Bölgesi">Dicle Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Dokuz Eylül Teknoloji Geliştirme Bölgesi">Dokuz Eylül Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Dudullu OSB Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi">Dudullu OSB Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Düzce Teknopark Teknoloji Geliştirme Bölgesi">Düzce Teknopark Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Ege Teknopark Teknoloji Geliştirme Bölgesi">Ege Teknopark Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Erciyes Üniversitesi Teknoloji Geliştirme Bölgesi">Erciyes Üniversitesi Teknolji Geliştirme Bölgesi</option>
-                    <option value="Erzurum Teknoloji Geliştirme Bölgesi">Erzurum Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Esenler Akıllı Şehir Odaklı İhtisas Teknoloji Geliştirme Bölgesi">Esenler Akıllı Şehir Odaklı İhtisas Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Eskişehir Teknoloji Geliştirme Bölgesi">Eskişehir Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Fırat Teknoloji Geliştirme Bölgesi">Fırat Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Gazi Teknopark Teknoloji Geliştirme Bölgesi">Gazi Teknopark Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Gaziantep OSB Teknoloji Geliştirme Bölgesi">Gaziantep OSB Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Gaziantep Üniversitesi Teknoloji Geliştirme Bölgesi">Gaziantep Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Gebze Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">Gebze Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Giresun Teknoloji Geliştirme Bölgesi">Giresun Teknoloji Geliştirme Bölgesi</option>
-                    <option value="GOSB Teknopark Teknoloji Geliştirme Bölgesi">GOSB Teknopark Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Göller Bölgesi Teknoloji Geliştirme Bölgesi">Göller Bölgesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Hacettepe Üniversitesi Teknoloji Geliştirme Bölgesi">Hacettepe Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Harran Üniversitesi Teknoloji Geliştirme Bölgesi">Harran Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Hatay Teknoloji Geliştirme Bölgesi">Hatay Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Iğdır Üniversitesi Teknoloji Geliştirme Bölgesi">Iğdır Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="İskenderun Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">İskenderun Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="İstanbul Medeniyet Üniversitesi Teknoloji Geliştirme Bölgesi">İstanbul Medeniyet Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="İstanbul Sabahattin Zaim Üniversitesi Teknoloji Geliştirme Bölgesi">İstanbul Sabahattin Zaim Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="İstanbul Teknik Üniversitesi Arı Teknokent Teknoloji Geliştirme Bölgesi">İstanbul Teknik Üniversitesi Arı Teknokent Teknoloji Geliştirme Bölgesi</option>
-                    <option value="İstanbul Teknoloji Geliştirme Bölgesi">İstanbul Teknoloji Geliştirme Bölgesi</option>
-                    <option value="İstanbul Üniversitesi-Cerrahpaşa Teknoloji Geliştirme Bölgesi">İstanbul Üniversitesi-Cerrahpaşa Teknoloji Geliştirme Bölgesi</option>
-                    <option value="İTÜ Teknopark Teknoloji Geliştirme Bölgesi">İTÜ Teknopark Teknoloji Geliştirme Bölgesi</option>
-                    <option value="İzmir Bilim ve Teknoloji Parkı Teknoloji Geliştirme Bölgesi">İzmir Bilim ve Teknoloji Parkı Teknoloji Geliştirme Bölgesi</option>
-                    <option value="İzmir Teknoloji Geliştirme Bölgesi">İzmir Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Kadir Has Üniversitesi Silivri Teknoloji Geliştirme Bölgesi">Kadir Has Üniversitesi Silivri Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Kahramanmaraş Teknoloji Geliştirme Bölgesi">Kahramanmaraş Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Kapadokya Teknoloji Geliştirme Bölgesi">Kapadokya Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Karabük Üniversitesi Teknoloji Geliştirme Bölgesi">Karabük Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Karaman Teknoloji Geliştirme Bölgesi">Karaman Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Kastamonu Üniversitesi Teknoloji Geliştirme Bölgesi">Kastamonu Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Kırıkkale Üniversitesi Teknoloji Geliştirme Bölgesi">Kırıkkale Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Kırklareli Üniversitesi Teknoloji Geliştirme Bölgesi">Kırklareli Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Kocaeli Üniversitesi Teknoloji Geliştirme Bölgesi">Kocaeli Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Konya Teknoloji Geliştirme Bölgesi">Konya Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Kuzey İzmir Teknoloji Geliştirme Bölgesi">Kuzey İzmir Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Kütahya Dumlupınar Teknoloji Geliştirme Bölgesi">Kütahya Dumlupınar Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Malatya Teknoloji Geliştirme Bölgesi">Malatya Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Marmara Üniversitesi Teknoloji Geliştirme Bölgesi">Marmara Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Mehmet Akif Ersoy Üniversitesi MAKU-BAKA Teknoloji Geliştirme Bölgesi">Mehmet Akif Ersoy Üniversitesi MAKU-BAKA Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Mersin Tarım ve Gıda İhtisas Teknoloji Geliştirme Bölgesi">Mersin Tarım ve Gıda İhtisas Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Mersin Teknoloji Geliştirme Bölgesi">Mersin Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Muğla Sıtkı Koçman Üniversitesi Teknoloji Geliştirme Bölgesi">Muğla Sıtkı Koçman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Namık Kemal Üniversitesi Teknoloji Geliştirme Bölgesi">Namık Kemal Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Niğde Ömer Halisdemir Üniversitesi Teknoloji Geliştirme Bölgesi">Niğde Ömer Halisdemir Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="ODTÜ TEKNOKENT Teknoloji Geliştirme Bölgesi">ODTÜ TEKNOKENT Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Osmaniye Teknoloji Geliştirme Bölgesi">Osmaniye Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Ostim Ekopark Teknoloji Geliştirme Bölgesi">Ostim Ekopark Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Pamukkale Üniversitesi Teknoloji Geliştirme Bölgesi">Pamukkale Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="POLSAN Teknoloji Geliştirme Bölgesi">POLSAN Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Recep Tayyip Erdoğan Üniversitesi ve Türk Alman Üniversitesi Teknoloji Geliştirme Bölgesi">Recep Tayyip Erdoğan Üniversitesi ve Türk Alman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Sağlık Bilimleri Üniversitesi Teknoloji Geliştirme Bölgesi Teknokenti">Sağlık Bilimleri Üniversitesi Teknoloji Geliştirme Bölgesi Teknokenti</option>
-                    <option value="Sakarya Uygulamalı Bilimler Üniversitesi Teknoloji Geliştirme Bölgesi">Sakarya Uygulamalı Bilimler Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Sakarya Üniversitesi Teknoloji Geliştirme Bölgesi">Sakarya Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Samsun Teknoloji Geliştirme Bölgesi">Samsun Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Selçuk Üniversitesi Teknoloji Geliştirme Bölgesi">Selçuk Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="SİVAS BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ TEKNOPARK TEKNOLOJİ GELİŞTİRME BÖLGESİ">SİVAS BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ TEKNOPARK TEKNOLOJİ GELİŞTİRME BÖLGESİ</option>
-                    <option value="TEKNOGÜ Teknoloji Geliştirme Bölgesi">TEKNOGÜ Teknoloji Geliştirme Bölgesi</option>
-                    <option value="TeknoHAB Teknoloji Geliştirme Bölgesi">TeknoHAB Teknoloji Geliştirme Bölgesi</option>
-                    <option value="TOBB Ekonomi ve Teknoloji Üniversitesi Teknoloji Geliştirme Bölgesi">TOBB Ekonomi ve Teknoloji Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Tokat Teknoloji Geliştirme Bölgesi">Tokat Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Trabzon Teknoloji Geliştirme Bölgesi">Trabzon Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Trakya Üniversitesi Teknoloji Geliştirme Bölgesi">Trakya Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Tübitak Marmara Araştırma Merkezi Teknopark Teknoloji Geliştirme Bölgesi">Tübitak Marmara Araştırma Merkezi Teknopark Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Ulutek Teknoloji Geliştirme Bölgesi">Ulutek Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Yalova Teknoloji Geliştirme Bölgesi">Yalova Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Yıldız Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">Yıldız Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Yüzüncü Yıl Üniversitesi Teknoloji Geliştirme Bölgesi">Yüzüncü Yıl Üniversitesi Teknoloji Geliştirme Bölgesi</option>
-                    <option value="Zonguldak Teknoloji Geliştirme Bölgesi">Zonguldak Teknoloji Geliştirme Bölgesi</option>
-                </select>
-            </div>
+<div class="form-group" id="teknopark_div" style="display:none;">
+    <label for="teknopark">Aktif olarak yer alınan Teknopark <span class="required">*</span></label>
+    <select id="teknopark" name="teknopark" class="form-control">
+        <option value="">Seçiniz</option>
+        <option value="Abdullah Gül Üniversitesi Teknoloji Geliştirme Bölgesi">Abdullah Gül Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Adıyaman Üniversitesi Teknoloji Geliştirme Bölgesi">Adıyaman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Adnan Menderes Üniversitesi Teknoloji Geliştirme Bölgesi">Adnan Menderes Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Afyon Uşak Zafer Teknoloji Geliştirme Bölgesi">Afyon Uşak Zafer Teknoloji Geliştirme Bölgesi</option>
+        <option value="Aksaray Üniversitesi Teknoloji Geliştirme Bölgesi">Aksaray Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Altınbaş Üniversitesi Teknoloji Geliştirme Bölgesi">Altınbaş Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Ankara Bilim Üniversitesi Teknoloji Geliştirme Bölgesi">Ankara Bilim Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Ankara Teknoloji Geliştirme Bölgesi">Ankara Teknoloji Geliştirme Bölgesi</option>
+        <option value="Ankara Teknopark Teknoloji Geliştirme Bölgesi">Ankara Teknopark Teknoloji Geliştirme Bölgesi</option>
+        <option value="Ankara Üniversitesi Teknoloji Geliştirme Bölgesi">Ankara Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Ankara Yıldırım Beyazıt Üniversitesi Teknoloji Geliştirme Bölgesi">Ankara Yıldırım Beyazıt Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Antalya Organize Sanayi Bölgesi Teknoloji Geliştirme Bölgesi">Antalya Organize Sanayi Bölgesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="ASBÜ Sosyal İnovasyon ve Girişimcilik Teknoloji Geliştirme Bölgesi">ASBÜ Sosyal İnovasyon ve Girişimcilik Teknoloji Geliştirme Bölgesi</option>
+        <option value="ASO Teknopark Teknoloji Geliştirme Bölgesi">ASO Teknopark Teknoloji Geliştirme Bölgesi</option>
+        <option value="Balıkesir Üniversitesi Teknoloji Geliştirme Bölgesi">Balıkesir Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Bandırma Onyedi Eylül Üniversitesi Teknoloji Geliştirme Bölgesi">Bandırma Onyedi Eylül Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Batı Akdeniz Teknokenti Teknoloji Geliştirme Bölgesi">Batı Akdeniz Teknokenti Teknoloji Geliştirme Bölgesi</option>
+        <option value="Batman Üniversitesi Teknoloji Geliştirme Bölgesi">Batman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Bilişim Vadisi Teknoloji Geliştirme Bölgesi">Bilişim Vadisi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Biruni Üniversitesi Teknoloji Geliştirme Bölgesi">Biruni Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Boğaziçi Üniversitesi Kandilli Teknoloji Geliştirme Bölgesi">Boğaziçi Üniversitesi Kandilli Teknoloji Geliştirme Bölgesi</option>
+        <option value="Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi">Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Bolu Teknoloji Geliştirme Bölgesi">Bolu Teknoloji Geliştirme Bölgesi</option>
+        <option value="Bozok Teknoloji Geliştirme Bölgesi">Bozok Teknoloji Geliştirme Bölgesi</option>
+        <option value="Bursa Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">Bursa Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Celal Bayar Üniversitesi Teknoloji Geliştirme Bölgesi">Celal Bayar Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Cumhuriyet Teknoloji Geliştirme Bölgesi">Cumhuriyet Teknoloji Geliştirme Bölgesi</option>
+        <option value="Çanakkale Teknoloji Geliştirme Bölgesi">Çanakkale Teknoloji Geliştirme Bölgesi</option>
+        <option value="Çankırı Teknoloji Geliştirme Bölgesi">Çankırı Teknoloji Geliştirme Bölgesi</option>
+        <option value="Çorum Teknoloji Geliştirme Bölgesi">Çorum Teknoloji Geliştirme Bölgesi</option>
+        <option value="Çukurova Teknoloji Geliştirme Bölgesi">Çukurova Teknoloji Geliştirme Bölgesi</option>
+        <option value="DENİZLİ OSB TEKNOLOJİ GELİŞTİRME BÖLGESİ">DENİZLİ OSB TEKNOLOJİ GELİŞTİRME BÖLGESİ</option>
+        <option value="Dicle Üniversitesi Teknoloji Geliştirme Bölgesi">Dicle Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Dokuz Eylül Teknoloji Geliştirme Bölgesi">Dokuz Eylül Teknoloji Geliştirme Bölgesi</option>
+        <option value="Dudullu OSB Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi">Dudullu OSB Boğaziçi Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Düzce Teknopark Teknoloji Geliştirme Bölgesi">Düzce Teknopark Teknoloji Geliştirme Bölgesi</option>
+        <option value="Ege Teknopark Teknoloji Geliştirme Bölgesi">Ege Teknopark Teknoloji Geliştirme Bölgesi</option>
+        <option value="Erciyes Üniversitesi Teknoloji Geliştirme Bölgesi">Erciyes Üniversitesi Teknolji Geliştirme Bölgesi</option>
+        <option value="Erzurum Teknoloji Geliştirme Bölgesi">Erzurum Teknoloji Geliştirme Bölgesi</option>
+        <option value="Esenler Akıllı Şehir Odaklı İhtisas Teknoloji Geliştirme Bölgesi">Esenler Akıllı Şehir Odaklı İhtisas Teknoloji Geliştirme Bölgesi</option>
+        <option value="Eskişehir Teknoloji Geliştirme Bölgesi">Eskişehir Teknoloji Geliştirme Bölgesi</option>
+        <option value="Fırat Teknoloji Geliştirme Bölgesi">Fırat Teknoloji Geliştirme Bölgesi</option>
+        <option value="Gazi Teknopark Teknoloji Geliştirme Bölgesi">Gazi Teknopark Teknoloji Geliştirme Bölgesi</option>
+        <option value="Gaziantep OSB Teknoloji Geliştirme Bölgesi">Gaziantep OSB Teknoloji Geliştirme Bölgesi</option>
+        <option value="Gaziantep Üniversitesi Teknoloji Geliştirme Bölgesi">Gaziantep Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Gebze Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">Gebze Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Giresun Teknoloji Geliştirme Bölgesi">Giresun Teknoloji Geliştirme Bölgesi</option>
+        <option value="GOSB Teknopark Teknoloji Geliştirme Bölgesi">GOSB Teknopark Teknoloji Geliştirme Bölgesi</option>
+        <option value="Göller Bölgesi Teknoloji Geliştirme Bölgesi">Göller Bölgesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Hacettepe Üniversitesi Teknoloji Geliştirme Bölgesi">Hacettepe Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Harran Üniversitesi Teknoloji Geliştirme Bölgesi">Harran Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Hatay Teknoloji Geliştirme Bölgesi">Hatay Teknoloji Geliştirme Bölgesi</option>
+        <option value="Iğdır Üniversitesi Teknoloji Geliştirme Bölgesi">Iğdır Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="İskenderun Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">İskenderun Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="İstanbul Medeniyet Üniversitesi Teknoloji Geliştirme Bölgesi">İstanbul Medeniyet Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="İstanbul Sabahattin Zaim Üniversitesi Teknoloji Geliştirme Bölgesi">İstanbul Sabahattin Zaim Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="İstanbul Teknik Üniversitesi Arı Teknokent Teknoloji Geliştirme Bölgesi">İstanbul Teknik Üniversitesi Arı Teknokent Teknoloji Geliştirme Bölgesi</option>
+        <option value="İstanbul Teknoloji Geliştirme Bölgesi">İstanbul Teknoloji Geliştirme Bölgesi</option>
+        <option value="İstanbul Üniversitesi-Cerrahpaşa Teknoloji Geliştirme Bölgesi">İstanbul Üniversitesi-Cerrahpaşa Teknoloji Geliştirme Bölgesi</option>
+        <option value="İTÜ Teknopark Teknoloji Geliştirme Bölgesi">İTÜ Teknopark Teknoloji Geliştirme Bölgesi</option>
+        <option value="İzmir Bilim ve Teknoloji Parkı Teknoloji Geliştirme Bölgesi">İzmir Bilim ve Teknoloji Parkı Teknoloji Geliştirme Bölgesi</option>
+        <option value="İzmir Teknoloji Geliştirme Bölgesi">İzmir Teknoloji Geliştirme Bölgesi</option>
+        <option value="Kadir Has Üniversitesi Silivri Teknoloji Geliştirme Bölgesi">Kadir Has Üniversitesi Silivri Teknoloji Geliştirme Bölgesi</option>
+        <option value="Kahramanmaraş Teknoloji Geliştirme Bölgesi">Kahramanmaraş Teknoloji Geliştirme Bölgesi</option>
+        <option value="Kapadokya Teknoloji Geliştirme Bölgesi">Kapadokya Teknoloji Geliştirme Bölgesi</option>
+        <option value="Karabük Üniversitesi Teknoloji Geliştirme Bölgesi">Karabük Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Karaman Teknoloji Geliştirme Bölgesi">Karaman Teknoloji Geliştirme Bölgesi</option>
+        <option value="Kastamonu Üniversitesi Teknoloji Geliştirme Bölgesi">Kastamonu Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Kırıkkale Üniversitesi Teknoloji Geliştirme Bölgesi">Kırıkkale Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Kırklareli Üniversitesi Teknoloji Geliştirme Bölgesi">Kırklareli Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Kocaeli Üniversitesi Teknoloji Geliştirme Bölgesi">Kocaeli Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Konya Teknoloji Geliştirme Bölgesi">Konya Teknoloji Geliştirme Bölgesi</option>
+        <option value="Kuzey İzmir Teknoloji Geliştirme Bölgesi">Kuzey İzmir Teknoloji Geliştirme Bölgesi</option>
+        <option value="Kütahya Dumlupınar Teknoloji Geliştirme Bölgesi">Kütahya Dumlupınar Teknoloji Geliştirme Bölgesi</option>
+        <option value="Malatya Teknoloji Geliştirme Bölgesi">Malatya Teknoloji Geliştirme Bölgesi</option>
+        <option value="Marmara Üniversitesi Teknoloji Geliştirme Bölgesi">Marmara Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Mehmet Akif Ersoy Üniversitesi MAKU-BAKA Teknoloji Geliştirme Bölgesi">Mehmet Akif Ersoy Üniversitesi MAKU-BAKA Teknoloji Geliştirme Bölgesi</option>
+        <option value="Mersin Tarım ve Gıda İhtisas Teknoloji Geliştirme Bölgesi">Mersin Tarım ve Gıda İhtisas Teknoloji Geliştirme Bölgesi</option>
+        <option value="Mersin Teknoloji Geliştirme Bölgesi">Mersin Teknoloji Geliştirme Bölgesi</option>
+        <option value="Muğla Sıtkı Koçman Üniversitesi Teknoloji Geliştirme Bölgesi">Muğla Sıtkı Koçman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Namık Kemal Üniversitesi Teknoloji Geliştirme Bölgesi">Namık Kemal Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Niğde Ömer Halisdemir Üniversitesi Teknoloji Geliştirme Bölgesi">Niğde Ömer Halisdemir Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="ODTÜ TEKNOKENT Teknoloji Geliştirme Bölgesi">ODTÜ TEKNOKENT Teknoloji Geliştirme Bölgesi</option>
+        <option value="Osmaniye Teknoloji Geliştirme Bölgesi">Osmaniye Teknoloji Geliştirme Bölgesi</option>
+        <option value="Ostim Ekopark Teknoloji Geliştirme Bölgesi">Ostim Ekopark Teknoloji Geliştirme Bölgesi</option>
+        <option value="Pamukkale Üniversitesi Teknoloji Geliştirme Bölgesi">Pamukkale Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="POLSAN Teknoloji Geliştirme Bölgesi">POLSAN Teknoloji Geliştirme Bölgesi</option>
+        <option value="Recep Tayyip Erdoğan Üniversitesi ve Türk Alman Üniversitesi Teknoloji Geliştirme Bölgesi">Recep Tayyip Erdoğan Üniversitesi ve Türk Alman Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Sağlık Bilimleri Üniversitesi Teknoloji Geliştirme Bölgesi Teknokenti">Sağlık Bilimleri Üniversitesi Teknoloji Geliştirme Bölgesi Teknokenti</option>
+        <option value="Sakarya Uygulamalı Bilimler Üniversitesi Teknoloji Geliştirme Bölgesi">Sakarya Uygulamalı Bilimler Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Sakarya Üniversitesi Teknoloji Geliştirme Bölgesi">Sakarya Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Samsun Teknoloji Geliştirme Bölgesi">Samsun Teknoloji Geliştirme Bölgesi</option>
+        <option value="Selçuk Üniversitesi Teknoloji Geliştirme Bölgesi">Selçuk Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="SİVAS BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ TEKNOPARK TEKNOLOJİ GELİŞTİRME BÖLGESİ">SİVAS BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ TEKNOPARK TEKNOLOJİ GELİŞTİRME BÖLGESİ</option>
+        <option value="TEKNOGÜ Teknoloji Geliştirme Bölgesi">TEKNOGÜ Teknoloji Geliştirme Bölgesi</option>
+        <option value="TeknoHAB Teknoloji Geliştirme Bölgesi">TeknoHAB Teknoloji Geliştirme Bölgesi</option>
+        <option value="TOBB Ekonomi ve Teknoloji Üniversitesi Teknoloji Geliştirme Bölgesi">TOBB Ekonomi ve Teknoloji Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Tokat Teknoloji Geliştirme Bölgesi">Tokat Teknoloji Geliştirme Bölgesi</option>
+        <option value="Trabzon Teknoloji Geliştirme Bölgesi">Trabzon Teknoloji Geliştirme Bölgesi</option>
+        <option value="Trakya Üniversitesi Teknoloji Geliştirme Bölgesi">Trakya Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Tübitak Marmara Araştırma Merkezi Teknopark Teknoloji Geliştirme Bölgesi">Tübitak Marmara Araştırma Merkezi Teknopark Teknoloji Geliştirme Bölgesi</option>
+        <option value="Ulutek Teknoloji Geliştirme Bölgesi">Ulutek Teknoloji Geliştirme Bölgesi</option>
+        <option value="Yalova Teknoloji Geliştirme Bölgesi">Yalova Teknoloji Geliştirme Bölgesi</option>
+        <option value="Yıldız Teknik Üniversitesi Teknoloji Geliştirme Bölgesi">Yıldız Teknik Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Yüzüncü Yıl Üniversitesi Teknoloji Geliştirme Bölgesi">Yüzüncü Yıl Üniversitesi Teknoloji Geliştirme Bölgesi</option>
+        <option value="Zonguldak Teknoloji Geliştirme Bölgesi">Zonguldak Teknoloji Geliştirme Bölgesi</option>
+    </select>
+</div>
 
             <div class="form-group">
                 <label for="trade_registry">7. Ticaret sicil numarası <span class="required">*</span></label>
                 <input type="text" id="trade_registry" name="trade_registry" class="form-control" required>
             </div>
 
+          
             <div class="form-group">
-                <label for="tax_number">8. Vergi numarası <span class="required">*</span></label>
-                <input type="text" id="tax_number" name="tax_number" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label for="website">9. Web Sitesi URL'si <span class="required">*</span></label>
+                <label for="website">8. Web Sitesi URL'si <span class="required">*</span></label>
                 <input type="url" id="website" name="website" class="form-control" required>
             </div>
 
             <div class="form-group">
-                <label for="linkedin">10. Start-Up Linkedin Profil URL'si <span class="required">*</span></label>
+                <label for="linkedin">9. Start-Up Linkedin Profil URL'si </label>
                 <input type="url" id="linkedin" name="linkedin" class="form-control" required>
             </div>
 
             <div class="form-group">
-                <label>11. Start-Up logosu (lütfen PNG formatında olan dosyalarınızı tercih edin ve dosyayı adlandırmak için kısa start-up adınızı kullanın) <span class="required">*</span></label>
+                <label>10. Start-Up logosu (lütfen PNG formatında olan dosyalarınızı tercih edin ve dosyayı adlandırmak için kısa start-up adınızı kullanın) <span class="required">*</span></label>
                 <div class="upload-btn-wrapper">
                     <button type="button" class="btn-upload">Dosya Yükle</button>
                     <input type="file" name="logo_file" required/>
@@ -354,37 +355,47 @@
          
 
             <div class="form-group">
-                <label for="oneliner">12. Girişiminizi sadece 8-10 kelimelik bir cümle ile tanımlayın <span class="required">*</span></label>
+                <label for="oneliner">11. Girişiminizi sadece 8-10 kelimelik bir cümle ile tanımlayın <span class="required">*</span></label>
                 <input type="text" id="oneliner" name="oneliner" class="form-control" required>
             </div>
             
             <div class="form-group">
-                <label for="employees">13. Toplam çalışan sayısı <span class="required">*</span><span class="instruction">Kurucular dahil</span></label>
+                <label for="employees">12. Toplam çalışan sayısı <span class="required">*</span><span class="instruction">Kurucular dahil</span></label>
                 <input type="number" id="employees" name="employees" class="form-control" required>
             </div>
 
             <div class="form-group">
-                <label for="supports">14. Start-Up’ınızın kuluçka merkezleri/hızlandırıcılar/startup merkezleri/kamu kurumlarından aldığı ilgili destek, teşvik ve ödülleri listeleyiniz. <span class="required">*</span></label>
+                <label for="supports">13. Start-Up’ınızın kuluçka merkezleri/hızlandırıcılar/startup merkezleri/kamu kurumlarından aldığı ilgili destek, teşvik ve ödülleri listeleyiniz. <span class="required">*</span></label>
                 <textarea id="supports" name="supports" class="form-control" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="investments">15. Start-Up’ınızın aldığı yatırımları listeleyiniz. <span class="required">*</span></label>
+                <label for="investments">14. Start-Up’ınızın aldığı yatırımları listeleyiniz. <span class="required">*</span></label>
                 <textarea id="investments" name="investments" class="form-control" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="revenue_model">16. 3-5 yıl için finansal projeksiyonlarınızı detaylandırınız <span class="required">*</span></label>
+                <label for="revenue_model">15. 3-5 yıl için finansal projeksiyonlarınızı detaylandırınız </label>
                 <textarea id="revenue_model" name="revenue_model" class="form-control" required></textarea>
             </div>
             
             
 
             <div class="form-group">
-                <label for="product_name">17. Ürün adı <span class="required">*</span></label>
+                <label for="product_name">16. Ürün adı <span class="required">*</span></label>
                 <input type="text" id="product_name" name="product_name" class="form-control" required>
             </div>
-            
+            <div class="form-group">
+    <label>17. Ürünün aşamasını belirtiniz. <span class="required">*</span></label>
+    <p>Lütfen girişiminizin hangi aşamada olduğunu seçin.</p>
+
+    
+    <label><input type="radio" name="asama" value="MVP Hazır (Prototip/Yazılım Hazır)"> MVP Hazır (Prototip/Yazılım Hazır)</label><br>
+    <label><input type="radio" name="asama" value="MVP Sonrası (Ürün Hazır, Satış Aşaması)"> MVP Sonrası (Ürün Hazır, Satış Aşaması)</label><br>
+    <label><input type="radio" name="asama" value="Ürün hazır, Satış yapılmış"> Ürün hazır, Satış yapılmış</label><br>
+    <label><input type="radio" name="asama" value="Satış Yapılmış, İhracat Var"> Satış Yapılmış, İhracat Var</label>
+</div>
+
             <div class="form-group">
                 <label for="launch_date">18. Ürününüzün lansman tarihi (veya beklenen) <span class="required">*</span></label>
                 <input type="date" id="launch_date" name="launch_date" class="form-control" required>
@@ -405,10 +416,15 @@
                 <textarea id="target_market" name="target_market" class="form-control" required></textarea>
             </div>
             
-            <div class="form-group">
-                <label for="tech_vertical">22. Ürün teknoloji dikeyini (kullanılan teknolojiler) belirtin. <span class="required">*</span></label>
-                <textarea id="tech_vertical" name="tech_vertical" class="form-control" required></textarea>
-            </div>
+          <div class="form-group">
+    <label for="tech_vertical">22. Ürün kategorisini belirtin. <span class="required">*</span></label>
+    <div>
+        <label><input type="checkbox" name="tech_vertical[]" value="Tarım Teknolojileri ">Tarım Teknolojileri (Bitki Besleme/Koruma, Tohum, Sulama, Sera, Tarım Makineleri, Fidan vb.)</label><br>
+        <label><input type="checkbox" name="tech_vertical[]" value="Tarımda Dijital Dönüşüm">Tarımda Dijital Dönüşüm (Hassas Tarım Teknolojileri, Uydu ve Drone Tabanlı İzleme, IoT (Nesnelerin İnterneti), Yapay Zekâ (AI), Büyük Veri ve Analitik, Blockchain, Mobil Uygulamalar, Dijital Tarım Platformları, Robotik ve Otomasyon vb.)</label><br>
+        <label><input type="checkbox" name="tech_vertical[]" value="Tarımda Sürdürülebilirlik / Yeşil Dönüşüm ">Tarımda Sürdürülebilirlik / Yeşil Dönüşüm  (Sürdürülebilirlik ve Karbon İzleme Sistemleri vb.)</label><br>
+        
+    </div>
+</div>
 
             
             <div class="form-group">
@@ -445,6 +461,23 @@
 </div>
 
 <script>
+
+    const radios = document.querySelectorAll('input[name="teknopark_var_mi"]');
+    const teknoparkDiv = document.getElementById('teknopark_div');
+    const teknoparkSelect = document.getElementById('teknopark');
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            if(radio.value === 'Evet' && radio.checked) {
+                teknoparkDiv.style.display = 'block';
+                teknoparkSelect.setAttribute('required', 'required');
+            } else if(radio.value === 'Hayır' && radio.checked) {
+                teknoparkDiv.style.display = 'none';
+                teknoparkSelect.removeAttribute('required');
+                teknoparkSelect.value = "";
+            }
+        });
+    });
 document.addEventListener('DOMContentLoaded', function() {
     const addBtn = document.getElementById('addParticipantBtn');
     const container = document.getElementById('participantsContainer');
