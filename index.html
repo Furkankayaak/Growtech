@@ -117,7 +117,18 @@
 
         .participant-block { border: 1px dashed #ddd; padding: 20px; margin-top: 20px; border-radius: 5px; position: relative; }
         .add-participant-button, .remove-participant-btn { padding: 8px 15px; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 14px; }
-        .add-participant-button { background-color: var(--add-btn-color); display: block; margin-top: 10px; }
+        .add-participant-button { 
+    padding: 10px 25px; /* Biraz daha dolgun buton */
+    border: none; 
+    border-radius: 4px; 
+    color: white; 
+    cursor: pointer; 
+    font-size: 15px; 
+    background-color: var(--add-btn-color); 
+    display: block; 
+    width: auto; /* İçeriğine göre genişlesin */
+    margin: 20px auto 30px auto; /* Üst/alt boşluk ve yatayda ortalama */
+}
         .add-participant-button:hover { background-color: #218838; }
         .remove-participant-btn { background-color: var(--remove-btn-color); position: absolute; top: 15px; right: 15px; }
         .remove-participant-btn:hover { background-color: #c82333; }
@@ -370,12 +381,12 @@
             </div>
 
             <div class="form-group">
-                <label for="investments">14. Start-Up’ınızın aldığı yatırımları listeleyiniz. <span class="required">*</span></label>
+                <label for="investments">14. Start-Up’ınızın aldığı yatırımları listeleyiniz. </label>
                 <textarea id="investments" name="investments" class="form-control" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="revenue_model">15. 3-5 yıl için finansal projeksiyonlarınızı detaylandırınız </label>
+                <label for="revenue_model">15. 3-5 yıl için finansal projeksiyonlarınızı detaylandırınız. </label>
                 <textarea id="revenue_model" name="revenue_model" class="form-control" required></textarea>
             </div>
             
@@ -428,16 +439,16 @@
 
             
             <div class="form-group">
-                <label for="past_events">23. Hangi uluslararası fuarlara ve start-up etkinliklerine katıldınız? <span class="required">*</span></label>
+                <label for="past_events">23. Hangi uluslararası fuarlara ve start-up etkinliklerine katıldınız? </label>
                 <textarea id="past_events" name="past_events" class="form-control" required></textarea>
             </div>
 
             <div id="participantsContainer">
               
             </div>
-            <button type="button" id="addParticipantBtn" class="add-participant-button">+ Katılımcı Ekle</button>
+            <button type="button" id="addParticipantBtn" class="add-participant-button">+ Yeni Katılımcı Ekle</button>
            
-            <br><br>
+           
             <div class="form-group">
                 <label for="team_competences">24. Ekip üyelerinizi ve yetkinliklerini açıklayınız. <span class="required">*</span></label>
                 <textarea id="team_competences" name="team_competences" class="form-control" required></textarea>
@@ -461,104 +472,109 @@
 </div>
 
 <script>
+    // Bu script en alttaki teknopark seçimi ile ilgili olanla birleştirildi.
+    document.addEventListener('DOMContentLoaded', function() {
+        // Teknopark seçimi için olan kod
+        const radios = document.querySelectorAll('input[name="teknopark_var_mi"]');
+        const teknoparkDiv = document.getElementById('teknopark_div');
+        const teknoparkSelect = document.getElementById('teknopark');
 
-    const radios = document.querySelectorAll('input[name="teknopark_var_mi"]');
-    const teknoparkDiv = document.getElementById('teknopark_div');
-    const teknoparkSelect = document.getElementById('teknopark');
-
-    radios.forEach(radio => {
-        radio.addEventListener('change', () => {
-            if(radio.value === 'Evet' && radio.checked) {
-                teknoparkDiv.style.display = 'block';
-                teknoparkSelect.setAttribute('required', 'required');
-            } else if(radio.value === 'Hayır' && radio.checked) {
-                teknoparkDiv.style.display = 'none';
-                teknoparkSelect.removeAttribute('required');
-                teknoparkSelect.value = "";
-            }
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if(radio.value === 'Evet' && radio.checked) {
+                    teknoparkDiv.style.display = 'block';
+                    teknoparkSelect.setAttribute('required', 'required');
+                } else if(radio.value === 'Hayır' && radio.checked) {
+                    teknoparkDiv.style.display = 'none';
+                    teknoparkSelect.removeAttribute('required');
+                    teknoparkSelect.value = "";
+                }
+            });
         });
-    });
-document.addEventListener('DOMContentLoaded', function() {
-    const addBtn = document.getElementById('addParticipantBtn');
-    const container = document.getElementById('participantsContainer');
-    
-    // Katılımcıları yeniden numaralandıran fonksiyon
-    function renumberParticipants() {
-        const blocks = container.querySelectorAll('.participant-block');
-        blocks.forEach((block, index) => {
-            const currentNum = index + 1;
-            const title = block.querySelector('.form-section-title');
-            if (title) {
-                title.textContent = `${currentNum}. KATILIMCI BİLGİLERİ`;
-            }
-        });
-    }
 
-    // Yeni katılımcı bloğu ekleyen fonksiyon
-    function addParticipant() {
-        const participantCount = container.querySelectorAll('.participant-block').length + 1;
-
-        const participantDiv = document.createElement('div');
-        participantDiv.classList.add('participant-block');
+        // Katılımcı ekleme/kaldırma kodu
+        const addBtn = document.getElementById('addParticipantBtn');
+        const container = document.getElementById('participantsContainer');
         
-        const participantHTML = `
-            <button type="button" class="remove-participant-btn">Bu Katılımcıyı Kaldır</button>
-            <h2 class="form-section-title">${participantCount}. KATILIMCI BİLGİLERİ</h2>
-
-            <div class="form-group">
-                <label for="p_name_${participantCount}">Katılımcının tam adı <span class="required">*</span></label>
-                <input type="text" id="p_name_${participantCount}" name="p_name[]" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label for="p_position_${participantCount}">Start-Up içindeki pozisyon <span class="required">*</span></label>
-                <input type="text" id="p_position_${participantCount}" name="p_position[]" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="p_email_${participantCount}">E-posta adresi <span class="required">*</span></label>
-                <input type="email" id="p_email_${participantCount}" name="p_email[]" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="p_dob_${participantCount}">Doğum tarihi <span class="required">*</span></label>
-                <input type="date" id="p_dob_${participantCount}" name="p_dob[]" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label for="p_id_${participantCount}">Ulusal Kimlik (TC Kimlik) No <span class="required">*</span></label>
-                <input type="text" id="p_id_${participantCount}" name="p_id[]" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="p_education_${participantCount}">Eğitim geçmişi <span class="required">*</span><span class="instruction">Üniversite, bölüm/program, mezuniyet yılı.</span></label>
-                <textarea id="p_education_${participantCount}" name="p_education[]" class="form-control" required></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="p_linkedin_${participantCount}">Kişisel LinkedIn Profilinin Bağlantısı <span class="required">*</span></label>
-                <input type="url" id="p_linkedin_${participantCount}" name="p_linkedin[]" class="form-control" required>
-            </div>
-        `;
-        
-        participantDiv.innerHTML = participantHTML;
-        container.appendChild(participantDiv);
-    }
-
-    // "Katılımcı Ekle" butonuna tıklama olayı
-    addBtn.addEventListener('click', addParticipant);
-
-    // Kaldırma butonları için olay dinleyicisi
-    container.addEventListener('click', function(e) {
-        if (e.target.classList.contains('remove-participant-btn')) {
-            e.target.closest('.participant-block').remove();
-            renumberParticipants(); // Kaldırma işleminden sonra yeniden numaralandır
+        function renumberParticipants() {
+            const blocks = container.querySelectorAll('.participant-block');
+            blocks.forEach((block, index) => {
+                const currentNum = index + 1;
+                const title = block.querySelector('.form-section-title');
+                if (title) {
+                    title.textContent = `${currentNum}. KATILIMCI BİLGİLERİ`;
+                }
+            });
         }
-    });
 
-    // Sayfa yüklendiğinde varsayılan olarak 1 katılımcı ekle
-    addParticipant();
-});
+        function addParticipant() {
+            const participantCount = container.querySelectorAll('.participant-block').length + 1;
+            const participantDiv = document.createElement('div');
+            participantDiv.classList.add('participant-block');
+            
+            // --- DEĞİŞİKLİK BURADA BAŞLIYOR ---
+            // Kaldır butonunu sadece 1'den fazla katılımcı varsa ekle
+            let removeButtonHTML = '';
+            if (participantCount > 1) {
+                removeButtonHTML = '<button type="button" class="remove-participant-btn">Bu Katılımcıyı Kaldır</button>';
+            }
+            // --- DEĞİŞİKLİK BURADA BİTİYOR ---
+
+            const participantHTML = `
+                ${removeButtonHTML}  <!-- Buton ya dolu ya da boş olacak -->
+                <h2 class="form-section-title">${participantCount}. KATILIMCI BİLGİLERİ</h2>
+
+                <div class="form-group">
+                    <label for="p_name_${participantCount}">Katılımcının tam adı <span class="required">*</span></label>
+                    <input type="text" id="p_name_${participantCount}" name="p_name[]" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="p_position_${participantCount}">Start-Up içindeki pozisyon <span class="required">*</span></label>
+                    <input type="text" id="p_position_${participantCount}" name="p_position[]" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="p_email_${participantCount}">E-posta adresi <span class="required">*</span></label>
+                    <input type="email" id="p_email_${participantCount}" name="p_email[]" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="p_dob_${participantCount}">Doğum tarihi <span class="required">*</span></label>
+                    <input type="date" id="p_dob_${participantCount}" name="p_dob[]" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="p_id_${participantCount}">Ulusal Kimlik (TC Kimlik) No <span class="required">*</span></label>
+                    <input type="text" id="p_id_${participantCount}" name="p_id[]" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="p_education_${participantCount}">Eğitim geçmişi <span class="required">*</span><span class="instruction">Üniversite, bölüm/program, mezuniyet yılı.</span></label>
+                    <textarea id="p_education_${participantCount}" name="p_education[]" class="form-control" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="p_linkedin_${participantCount}">Kişisel LinkedIn Profilinin Bağlantısı <span class="required">*</span></label>
+                    <input type="url" id="p_linkedin_${participantCount}" name="p_linkedin[]" class="form-control" required>
+                </div>
+            `;
+            
+            participantDiv.innerHTML = participantHTML;
+            container.appendChild(participantDiv);
+        }
+
+        addBtn.addEventListener('click', addParticipant);
+
+        container.addEventListener('click', function(e) {
+            if (e.target.classList.contains('remove-participant-btn')) {
+                e.target.closest('.participant-block').remove();
+                renumberParticipants();
+            }
+        });
+
+        addParticipant(); // Sayfa yüklendiğinde ilk katılımcıyı ekle (butonsuz olacak)
+    });
 </script>
 
 </body>
