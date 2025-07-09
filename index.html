@@ -45,7 +45,7 @@
         .menu-icon span { display: block; width: 100%; height: 4px; background-color: #555; border-radius: 2px; }
         main { padding-left: 0; }
 
-        /* H1 BAŞLIĞININ ÜSTÜNDEKİ BOŞLUĞU KONTROL ETMEK İÇİN GÜNCELLEME */
+        
         h1 { 
             font-size: 24px; 
             font-weight: normal; 
@@ -135,28 +135,24 @@
             margin-right: 4px;           
         }
 
-        /* =============================================== */
-        /* MOBİL UYUMLULUK (RESPONSIVE) İÇİN EKLENEN KODLAR */
-        /* =============================================== */
         
-        /* 768px ve altındaki ekranlar için geçerli olacak stiller */
         @media (max-width: 768px) {
             body {
-                padding: 10px 5px; /* Dış boşlukları azalt */
+                padding: 10px 5px; 
             }
             
             .container {
-                padding: 20px 15px; /* İç boşlukları azalt */
-                box-shadow: none; /* Mobilde gölgeyi kaldır */
+                padding: 20px 15px; 
+                box-shadow: none; 
             }
 
             header {
-                flex-direction: column; /* Header öğelerini dikeyde hizala */
+                flex-direction: column; 
                 gap: 15px;
             }
 
             h1 {
-                font-size: 20px; /* Ana başlığı biraz küçült */
+                font-size: 20px; 
                 line-height: 1.4;
             }
 
@@ -168,14 +164,14 @@
                 font-size: 14px;
             }
             
-            /* Logo alanını dikeyde hizala */
+           
             .form-logos {
-                grid-template-columns: 1fr; /* Tek sütuna düşür */
-                gap: 25px; /* Aradaki boşluğu azalt */
-                justify-items: center; /* Logoları ortala */
+                grid-template-columns: 1fr; 
+                gap: 25px; 
+                justify-items: center; 
             }
 
-            /* Mobilde logoların boyutlarını daha dengeli yap */
+           
             .form-logos .form-logo-item,
             .form-logos .form-logo-item:nth-child(1),
             .form-logos .form-logo-item:nth-child(3) {
@@ -188,7 +184,7 @@
                 height: auto;
             }
             
-            /* Katılımcı ekleme bloğu için mobilde boşlukları azalt */
+           
             .participant-block {
                 padding: 15px;
             }
@@ -649,7 +645,7 @@
             }
         });
         
-        // Sayfa yüklendiğinde en az bir katılımcı bloğu ekle
+        
         addParticipant(); 
     });
 </script>
