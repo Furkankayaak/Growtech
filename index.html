@@ -140,10 +140,10 @@
             margin-bottom: -15px;
         }
         .form-note .note-asterisk {
-            color: var(--required-color); /* Zaten tanımlı olan kırmızı rengi kullanır */
-            font-weight: bold;           /* Yıldızı daha belirgin yapar */
-            font-style: normal;          /* Yıldızın italik olmasını engeller */
-            margin-right: 4px;           /* Yıldız ile metin arasına küçük bir boşluk koyar */
+            color: var(--required-color); 
+            font-weight: bold;           
+            font-style: normal;          
+            margin-right: 4px;           
         }
     </style>
 </head>
@@ -167,7 +167,7 @@
         <form action="" method="POST" enctype="multipart/form-data">
         
             <div class="form-logos">
-                <!-- HTML SIRASI DOĞRU OLMALI: Geniş Logo, Dikey Logo, Geniş Logo -->
+               
                 <img src="grow.png" alt="Growtech Logo" class="form-logo-item">
                 <img src="aosb.png" alt="AOSB Logo" class="form-logo-item">
                 <img src="itu.png" alt="İTÜ Logo" class="form-logo-item">
@@ -175,7 +175,7 @@
 
             <h1>GROWTECH Start-Up Zone & Demoday Başvuru Formu</h1>
             
-            <!-- FORMUN GERİ KALANI OLDUĞU GİBİ DEVAM EDİYOR... -->
+          
             <h3></h3>
             <p>Dünyanın en büyük tarım fuarlarından biri olan Growtech, bu yıl dijital tarım devrimini sahneye taşıyor!</p>
             <p>Antalya OSB Teknopark ve İTÜ Arı Teknokent işbirliği ile düzenlenecek Growtech Start-Up Zone & Demoday Organizasyonu, teknoparklarda faaliyet gösteren ve ürünü ticarileşmiş/ticarileşme aşamasında olan seçili girişimleri sektörle ve yatırımcılar ile buluşturacak.</p>
@@ -473,7 +473,7 @@
                 <label for="additional_info">25. Ek Bilgiler <span class="required">*</span></label>
                 <textarea id="additional_info" name="additional_info" class="form-control" required></textarea>
             </div>
-            <p class="form-note"><span class="note-asterisk">*</span> Yıldızlı alanların doldurulması zorunludur.</p>
+            <p class="form-note"><span class="note-asterisk">*</span> Doldurulması zorunlu alanlar.</p>
             <button type="submit" class="submit-button">Başvuru Gönder</button>
 
         </form>
@@ -485,9 +485,9 @@
 </div>
 
 <script>
-    // Bu script en alttaki teknopark seçimi ile ilgili olanla birleştirildi.
+    
     document.addEventListener('DOMContentLoaded', function() {
-        // Teknopark seçimi için olan kod
+       
         const radios = document.querySelectorAll('input[name="teknopark_var_mi"]');
         const teknoparkDiv = document.getElementById('teknopark_div');
         const teknoparkSelect = document.getElementById('teknopark');
@@ -505,7 +505,7 @@
             });
         });
 
-        // Katılımcı ekleme/kaldırma kodu
+        
         const addBtn = document.getElementById('addParticipantBtn');
         const container = document.getElementById('participantsContainer');
         
@@ -525,13 +525,12 @@
             const participantDiv = document.createElement('div');
             participantDiv.classList.add('participant-block');
             
-            // --- DEĞİŞİKLİK BURADA BAŞLIYOR ---
-            // Kaldır butonunu sadece 1'den fazla katılımcı varsa ekle
+           
             let removeButtonHTML = '';
             if (participantCount > 1) {
                 removeButtonHTML = '<button type="button" class="remove-participant-btn">Bu Katılımcıyı Kaldır</button>';
             }
-            // --- DEĞİŞİKLİK BURADA BİTİYOR ---
+            
 
             const participantHTML = `
                 ${removeButtonHTML}  <!-- Buton ya dolu ya da boş olacak -->
@@ -586,7 +585,7 @@
             }
         });
 
-        addParticipant(); // Sayfa yüklendiğinde ilk katılımcıyı ekle (butonsuz olacak)
+        addParticipant(); 
     });
 </script>
 
