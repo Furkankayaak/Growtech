@@ -132,6 +132,19 @@
         .add-participant-button:hover { background-color: #218838; }
         .remove-participant-btn { background-color: var(--remove-btn-color); position: absolute; top: 15px; right: 15px; }
         .remove-participant-btn:hover { background-color: #c82333; }
+        .form-note {
+            text-align: center;
+            font-size: 13px;
+            font-style: italic;
+            color: var(--secondary-text-color);
+            margin-bottom: -15px;
+        }
+        .form-note .note-asterisk {
+            color: var(--required-color); /* Zaten tanımlı olan kırmızı rengi kullanır */
+            font-weight: bold;           /* Yıldızı daha belirgin yapar */
+            font-style: normal;          /* Yıldızın italik olmasını engeller */
+            margin-right: 4px;           /* Yıldız ile metin arasına küçük bir boşluk koyar */
+        }
     </style>
 </head>
 <body>
@@ -460,7 +473,7 @@
                 <label for="additional_info">25. Ek Bilgiler <span class="required">*</span></label>
                 <textarea id="additional_info" name="additional_info" class="form-control" required></textarea>
             </div>
-            
+            <p class="form-note"><span class="note-asterisk">*</span> Yıldızlı alanların doldurulması zorunludur.</p>
             <button type="submit" class="submit-button">Başvuru Gönder</button>
 
         </form>
